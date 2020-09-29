@@ -16,4 +16,24 @@ aside {
 
 main {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* components */
+
+.dkh-btn {
+    cursor: pointer;
+}
+
+/* desktop styles */
+@media screen and (min-width: 1024px) {
+    body {
+        grid-template-columns: 40% 60%;
+    }
+    aside {
+        display: inline;
+    }
+}
+
+
