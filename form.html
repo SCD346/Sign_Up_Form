@@ -9,6 +9,38 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <aside></aside>
+        <main>
+            <form id="dkh-sign-up-form">
+                <div class="dkh-form-header">
+                    <div>
+                        <small>Sign up with</small>
+                        <div class="dkh-form-header__social-wrapper">
+                            <button type="button" class="dkh-btn dkh-btn-icon dkh-btn-github">
+                                <i class="fab fa-github fa-lg"></i>
+                                Github
+                            </button>
+                            <button type="button" class="dkh-btn dkh-btn-icon dkh-btn-twitter">
+                                <i class="fab fa-twitter fa-lg"></i>
+                                Twitter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dkh-form-body">
+                    <small>Or sign in with email and password</small>
+                    <div class="dkh-form-field">
+                        <fieldset class="email">
+                            <input class="dkh-form-field__input" type="email" name="email" id="email" required placeholder="Email">
+                            <div class="dkh-form-field__messages"></div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="dkh-form-footer">
+                    <button class="dkh-btn dkh-btn-primary" type="submit">Sign Up</button>
+                </div>
+            </form>
+        </main>
        
         
         <script src="app.js" async defer></script>
