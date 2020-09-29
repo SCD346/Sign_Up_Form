@@ -13,6 +13,23 @@ function handleSignupFormSubmit(e) {
     const { email, password } = Object.fromEntries(formDataEntries);
 
     // submit email and password to an API
+
+    const emailErrorMessage = validateEmail(email);
+    const passwordErrorMessage = validateEmail(password);
+
+    if (!emailErrorMessage) {
+        // selector: email form field element
+        const emailErrorMessageElement = document.querySelector('.email .dkh-form-field__messages');
+        // render email error message
+        emailErrorMessageElement.innerText = emailErrorMessage;
+    }
+
+    if (passwordErrorMessage) {
+        // selector: email form field message element
+        const passwordErrorMessageElement = document.querySelector('.password .dkh-form-field__messages');
+        // render password error message
+        passwordErrorMessageElement.innerText = passwordErrorMessage;
+    }
 }
 
 //Password Validation
@@ -35,3 +52,13 @@ function validatePassword(password, minlenght) {
 }
 
 //Email Validation
+function validateEmail(email) {
+    if (!email) return 'Email is required';
+      
+    const isValidEmail = /^\S+@\S+$/g
+    if (!isValidEmail.test(email)) {
+      return 'Please enter a valid email';
+    }
+  
+    return '';
+  }
